@@ -1,0 +1,233 @@
+---
+title: Defending Apple's Child Safety Features
+publishedAt: '2021-11-13'
+tags: 'tech'
+summary: 'New child protections are consistent with user privacy. Criticisms are due to a misunderstanding of the technology.'
+---
+
+Apple is introducing new features in its software to limit the spread of Child Sexual Abuse Material (CSAM). CSAM refers to "content that depicts sexually explicit activities involving a child." In its recent [press release](https://www.apple.com/child-safety/), Apple outlines changes to its software and dives into the technical details of how they will implement these features.
+
+Reactions to this announcement have been universally negative. Individuals and groups alike are blasting Apple and are calling for mass boycotts in response to their decision to implement these CSAM protections. [Edward Snowden](https://edwardsnowden.substack.com/p/all-seeing-i) and the [Electronic Frontier Foundation](https://www.eff.org/deeplinks/2021/08/apples-plan-think-different-about-encryption-opens-backdoor-your-private-life) are among the many who are lambasting Apple over this announcement. Some are calling Apple's new safety initiatives "the biggest privacy violation ever." John Gruber calls it a "slippery slope" in his [article](https://daringfireball.net/2021/08/apple_child_safety_initiatives_slippery_slope). In short, people **hate** Apple's new CSAM protections.
+
+I want to clarify a few misconceptions regarding these new features because the public is quite mistaken about what Apple is doing. I'll also explain why Apple's child protections are **consistent with user privacy.** Much of the fear and anger stems from a misunderstanding of these technologies. I believe that a little more information about the unerlying tools and processes will alleviate some of the anger people hold towards Apple.
+
+Finally, I'll mention why the _federal government_, not Apple, is who we should criticize. We should not fear the technology - we should celebrate it! We should be weary of our own federal government coercing Apple or another tech company into transferring their technologies to authorities.
+
+<div className="calloutInfo">
+  <h3>📄 In this article, we'll discuss:</h3>
+  <ol>
+    <li>Apple's new child safety features</li>
+    <li>How those new features are consistent with user-privacy</li>
+    <li>Why the federal government should not intervene with Apple's new technologies</li>
+  </ol>
+</div>
+
+## A quick note on "spying"
+
+People misunderstand and often misuse the term _spying_. You often hear: "Big Tech is spying on you and your loved ones!" or "Corporations are spying on your data!" Many people fail to understand spying and treat tech companies as enemies rather than friends.
+
+Spying is _observing someone without their knowledge and/or consent_.
+
+When Apple, Microsoft, or Google collect telemetry data or send you personalized advertisements: **that is not spying.** When companies plan to collect data, they explain to us what they collect and when.
+
+Every major tech company outlines their data collection practices. This is an industry-standard that all major tech companies have adopted, including Apple.
+
+_If someone explicitly outlines when and how they collect data from you, that is not and cannot be spying._
+
+For example, Apple requires that their app developers outline data collection using a nutrition-label style. Apple's communication requirements are clear and transparent, as you can see in the graphic below.
+
+You may not _like_ what they collect or think that they collect too much information - that is an entirely different issue from spying. The public warcry that "Big Tech is spying on me" is, quite frankly, garbage.
+
+<figure>
+  <img src="../../static/images/applePrivacyLabel.jpg" alt="Apple data nutrition label" />
+  <figcaption>Source: Apple, Inc.</figcaption>
+</figure>
+
+We unfairly and dishonestly criticize large tech companies. They are not "spying" on us, regardless of what the anonymous keyboard-warriors may tell you. Yes, they collect data and, on occasion, keep logs of what we do while using their software. But this is _not_ spying if they tell us what they are collecting.
+
+This is not to argue that tech companies have implemented these features perfectly. I am simply rebutting the ludicrous but prevalent argument that major tech corporations, specifically Apple, is spying on our data and is watching our every digital move without our consent.
+
+For more information, I wrote an <a href="/blog/big-tech">article</a> devoted to Big Tech.
+
+## Apple's communication safety feature
+
+Apple's new message feature warns children and their parents when receiving or sending sexually explicit photos.
+
+"Wait a second" you might say. "Apple is snooping through my child's pictures?" Not quite.
+
+First, this feature is _disabled_ by default. To enable this new protection feature, a few requirements must be met:
+
+1. This feature is available only for **family** accounts on iCloud
+2. The parent/guardian account (i.e. the account overseeing the child account) must opt in to the feature
+3. Parent notifications can only be enabled for child accounts where the child is age 12 or younger
+4. Messages are still end-to-end encrypted (Apple never gains access to the messages)
+
+It is clear that Apple is not trying to trick users into auto-enabling this feature. It is finely-scoped and is opt-out by default.
+
+<figure>
+  <img src="../../static/images/csam_messages.jpg" alt="Apple communication safety feature" />
+  <figcaption>Source: Apple, Inc.</figcaption>
+</figure>
+
+You may be wondering "Well then how does Apple know if something is explicit if they never gain access to the message?" This is where Apple's technology comes into play.
+
+**On-device machine learning** analyzes image attachments and determine if a photo is sexually explicit. This allows iOS to determine whether or not the image is sexual in nature without requiring human eyes to view the photo. Apple details the technology involved in this process in their [report](https://www.apple.com/child-safety/pdf/Expanded_Protections_for_Children_Technology_Summary.pdf). For our purposes it is important to understand that Apple _cannot_ open and view your child's message and photos.
+
+The image is **not** uploaded and saved to Apple's servers. Only the sender and receiver can view the image.
+
+Even if the algorithm determines that the image is sexually explicit, the child can still view it. Their parents will receive a notification of the sexually-explicit photo (the parents will not even receive a copy of the image). And as you can see from the above image, iOS explains to the child what is happening and why.
+
+Apple is completely transparent throughout this process - neither the child nor their parent(s) are misled or "baited" into this process. These communication safety features are logical and do not prevent the child nor their parents from communicating privately. 
+
+If someone disagrees with what Apple is doing here, they and their children can remain opted-out of this feature. This iMessage update has not garnered much uproar compared to the iCloud updates we'll discuss next.
+
+Let's now move on to that feature, which _is_ drawing the ire of many users.
+
+## CSAM detection
+
+Apple's new iCloud photo feature is garnering the most attention... and anger. Let's summarize things before we dive in.
+
+<div className="calloutInfo">
+  <h3>🛡️ CSAM protection summary</h3>
+  <p>
+    Apple utilizes this detection feature to identify and report iCloud users who store
+    known Child Sexual Abuse (CSAM) material in their iCloud Photos
+    accounts.
+  </p>
+  <p>
+    If a user uploads a certain number of images (the current estimate is ~30 images) that match a known database of CSAM
+    image hashes, Apple may contact the National Center for Missing and Exploited Children (NCMEC)
+    and report that user for possible CSAM violations.
+  </p>
+  <p>
+    <b>
+      This feature applies only to users who utilize iCloud to store and/or backup their photos.
+    </b>
+  </p>
+</div>
+
+Furthermore, Apple promises in their [report](https://www.apple.com/child-safety/pdf/CSAM_Detection_Technical_Summary.pdf) that:
+
+- they learn _nothing_ about images that do not match the known CSAM database
+- they cannot access metadata for flagged images until a threshold is exceeded
+- the risk of the system incorrectly flagging an account is "extremely low" (1 in 1 trillion)
+- users cannot access the CSAM database
+- users cannot identify which images Apple flagged
+
+We'll return to this list later to determine whether or not Apple follows through on their promises.
+
+Many large tech companies already scan content for sexually explicit adolescent material. However, this scanning is often performed in the cloud and _off of the user's physical device._ This is where Apple's approach branches from the status quo. According to Apple:
+
+> Instead of scanning images in the cloud, the system performs on-device matching using a database of known CSAM image hashes provided by NCMEC and other child safety organizations. Apple further transforms this database into an unreadable set of hashes that is securely stored on users’ devices.
+
+<figure>
+  <img src="../../static/images/csam_tech.png" alt="Apple communication safety feature" />
+  <figcaption>Source: Apple, Inc.</figcaption>
+</figure>
+
+This on-device matching has caused panic and anger from even the most loyal of Apple users. Much of this panic stems from a misunderstand of the tools Apple uses to check for CSAM material.
+
+Apple employs a technology called _NeuralHash_ to convert images into long, unique strings of characters. This allows iOS to uniquely identify an image without having to pass the literal image around. The algorithm ensures that images which are visually similar will produce the same hash whereas images that are different from one another will produce different hashes. This prevents child predators from blurring or mis-coloring their child pornography to avoid detection.
+
+<div className="calloutInfo">
+  <h3>💡 An algorithm is a step-by-step procedure for accomplishing something</h3>
+  <p>
+    Developers give machines instructions to accopmlish some task - that is the essence of an
+    algorithm.
+  </p>
+  <p className="leading-9">
+  For example: when you click the <span className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow hover">+</span> button on Instagram, the system runs through the instructions that the developer gave it. That could be:
+  </p>
+  <ol>
+    <li>Send the picture to our sever</li>
+    <li>Add the picture to Andrew's profile</li>
+    <li>Notify Andrew's followers that he uploaded a new image</li>
+  </ol>
+  <p>That's an algorithm!</p>
+</div>
+
+This new CSAM feature also utilizes [Private Set Intersection (PSI)](https://www.apple.com/child-safety/pdf/Apple_PSI_System_Security_Protocol_and_Analysis.pdf), which is a cryptographic tool that allows Apple to learn and understand image hashes (derived from NeuralHash) without learning about the image itself. Apple's servers and the user's device both employ PSI as part of Apple's new CSAM protection.
+
+iOS then [blinds](https://en.wikipedia.org/wiki/Blind_signature) the hashes (disguises it) and compares them on-device with a known database of blinded hashses. iOS 15 includes this database; it is *unavailable* to users (users cannot access or view this database).
+
+Apple alone knows the algorithm used to blind the hash. This prevents malicious users from obtaining the "key" required to decrypt the package. The graphic below illustrates, at a high level, the flow of data that occurs when a user uploads an image to iCloud.
+
+<figure>
+  <img src="../../static/images/psi.png" alt="Apple private set intersection" />
+  <figcaption>Source: Apple, Inc.</figcaption>
+</figure>
+
+Many users believe that Apple developers have access to their photos and that people are constantly scanning photos looking for CSAM material. This is completely false.
+
+**Apple never obtains access to your photos while searching for CSAM material.**
+
+Only the hash values are known. For example, you upload a picture of your dog. NeuralHash generates the following hash: `11d9b097ac960bf8a6c131fa`. This value is the unique fingerprint of that photo. No human will lay their eyes on your dog. iOS only deals with the hash value when determining whether or not that image qualifies as CSAM material.
+
+After creating this unique fingerprint, iOS creates what Apple calls a "cryptographic safety voucher". This safety voucher is essentially an envolope with data related to the image. Some propeties of this voucher:
+- the user's iPhone creates the voucher
+- the voucher encodes whether or not the image matches an entry in the known CSAM database
+- the voucher contains additional metadata used in downstream decryption by the server
+
+<figure>
+  <img src="../../static/images/apple_voucher.png" alt="Apple safety voucher" />
+  <figcaption>Source: Apple, Inc.</figcaption>
+</figure>
+
+This saftey voucher creates a cryptographic puzzle that makes decryption impossible unless the puzzle is complete. No one can unlock and view the original image without first obtaining access to all elements of the puzzle, which is mathematically impossible according to Apple.
+
+Even Apple cannot unlock and view the image, only the image *hash*. Many people are angry over the notion that "Apple is scanning and looking my pictures." **This is not happening.**
+
+## CSAM protection does not violate privacy expectations
+
+Apple's new CSAM protection features do not violate current expectations of privacy that Apple users enjoy.
+
+iOS deals with long sequences of letters and numbers. Human developers are not holding up polaroids and comparing them with pornographic photos. Many people believe that this is indeed the case. This misconception is fueling public anger and acrimony towards Apple.
+
+**The fact that part of the CSAM scanning process is performed on-device does not necessarily entail a loss of privacy.**
+
+iOS hashes and encodes images on your iPhone if you plan to upload them to iCloud. This does not require Apple to create a store a copy of your image - in fact it allows software to scan and check for sexual abuse material without human intervention. Your images are your property; they are not shared or revealed to Apple.
+
+After reading Apple's technical summary and following the steps outlined in their report, it appears that they are indeed following through on their promises.
+
+## Why implement this now?
+
+You may be asking "Why is Apple adding this in now? Seems like they want to collect more data to make more money." These are reasonable questions. The primary reason why Apple is introducing these features now is:
+
+**Apple knows that the federal government is discussing laws requiring these child protections, and they have finally developed a set of tools that accopmlish their goals while maintaining privacy.**
+
+Members of Congress are trying to progress legislation requiring tech companies to scan and submit CSAM material. The most notable of these is the [EARN IT Act](https://www.congress.gov/bill/116th-congress/senate-bill/3398/text), a destructive and immoral bill that would establish a National Commission on Online Child Sexual Exploitation Prevention. This would be a group of Congressmen and other "experts" in the field who make public policy decisions regarding the regulation of child sexual material on the internet.
+
+<div className="calloutInfo">
+  <h3>🔔 I wrote an article on this!</h3>
+  <p>
+    I'm taking this opportunity to plug my <a href="/blog/moral-case-earn-it">article</a>
+    on the EARN IT Act.
+  </p>
+</div>
+
+Apple knows this and has been developing these CSAM protections for years. They now have a way of implementing these protections while staying consistent with their privacy promises. This is why upcoming software updates will include these protective features. *Not* because they want to snoop or spy on us, but because they want to have a sustainable suite of tools that will be consistent with upcoming federal regulations.
+
+<div className="calloutInfo">
+  <h3>📝 The important points:</h3>
+  <ol>
+    <li>Apple developers (i.e. human eyes) do not ever scan or look at your pictures</li>
+    <li>Your iMessages are still end-to-end encrypted</li>
+    <li>Neither Apple nor any other body can view your uploaded pictures unless a certain number of them are flagged as likely CSAM material</li>
+  </ol>
+</div>
+
+The technical and mathematical components are impressive and should be celebrated. Yes, with every piece of software comes the risk of hacking or the potential influence of bad actors - this is why companies invest so much into data security, especially Apple. These companies know that user trust is worth billions of dollars, and is why Apple has spent so long developing these tools. Many other companies have been scanning user content for years; Apple is just now entering this realm (at least at such a large leve) because they have developed a method of implementing CSAM detection that operates within their framework of user privacy.
+
+**Apple users can rest assured and expect the same level of privacy that they currently enjoy.** These new features do not annihilate your privacy, despite what you may read on social media. People around the world are raising their fists and shouting at Apple before having even read the summary!
+
+This concerns me most. Even technical users are too mentally lazy to discuss the tools and methods Apple is implementing. They prefer to scream and type in all caps while failing to understand what they are yelling about.
+
+But upon brief inspection, we can see that Apple has carefully developed these new tools so that they can detect CSAM material while mainting a reasonable level of privacy that users currently expect from their products. There will be bugs or problems that arise - that is the nature of software. I am not trying to argue that Apple has created a perfect system. But it is one that is privacy-respecting, not privacy-destroying like many claim.
+
+As Apple says: "What happens on your iPhone, stays on your iPhone" 🍎
+
+---
+
+Update | November 13, 2021
+
+Despite a delay in its rollout, [rumors](https://www.macrumors.com/2021/11/09/apple-messages-communication-safety-ios-15-2/) derived from iOS Beta builds hint that Apple will finally be implementing its "Communication Safety" feature in iOS 15.2.
