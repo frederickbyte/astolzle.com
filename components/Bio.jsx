@@ -2,7 +2,7 @@ const Bio = () => {
   return (
     <div className="flex flex-col sm:flex-row items-start">
       <div className="flex flex-col pr-8">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-gray-800 dark:text-white">
           Andrew Stolzle
         </h1>
         <p className="text-gray-600 dark:text-gray-400">

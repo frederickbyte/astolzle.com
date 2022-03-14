@@ -2,10 +2,17 @@
 title: Defending Apple's Child Safety Features
 publishedAt: '2021-11-13'
 tags: 'tech'
-summary: 'New child protections are consistent with user privacy. Criticisms are due to a misunderstanding of the technology.'
+summary: 'New child protections are consistent with user privacy.'
 ---
 
 Apple is introducing new features in its software to limit the spread of Child Sexual Abuse Material (CSAM). CSAM refers to "content that depicts sexually explicit activities involving a child." In its recent [press release](https://www.apple.com/child-safety/), Apple outlines changes to its software and dives into the technical details of how they will implement these features.
+
+<div className="flex items-center p-4 mb-4 bg-indigo-100 rounded-lg dark:bg-ingido-200" role="alert">
+    <svg className="flex-shrink-0 w-5 h-5 text-indigo-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
+    <div className="ml-3 text-sm font-medium text-indigo-700">
+      Apple has implemented some of these features in iOS 15.2 according to their <a href="https://www.apple.com/child-safety/" aria-label='apple release notes' className="text-indigo-700 underline hover:text-indigo-900 hover:underline-indigo-900">release notes</a>.
+    </div>
+</div>
 
 Reactions to this announcement have been universally negative. Individuals and groups alike are blasting Apple and are calling for mass boycotts in response to their decision to implement these CSAM protections. [Edward Snowden](https://edwardsnowden.substack.com/p/all-seeing-i) and the [Electronic Frontier Foundation](https://www.eff.org/deeplinks/2021/08/apples-plan-think-different-about-encryption-opens-backdoor-your-private-life) are among the many who are lambasting Apple over this announcement. Some are calling Apple's new safety initiatives "the biggest privacy violation ever." John Gruber calls it a "slippery slope" in his [article](https://daringfireball.net/2021/08/apple_child_safety_initiatives_slippery_slope). In short, people **hate** Apple's new CSAM protections.
 
@@ -161,9 +168,11 @@ Many users believe that Apple developers have access to their photos and that pe
 
 **Apple never obtains access to your photos while searching for CSAM material.**
 
-Only the hash values are known. For example, you upload a picture of your dog. NeuralHash generates the following hash: `11d9b097ac960bf8a6c131fa`. This value is the unique fingerprint of that photo. No human will lay their eyes on your dog. iOS only deals with the hash value when determining whether or not that image qualifies as CSAM material.
+Only the hash values are known. For example, you upload a picture of your dog. NeuralHash generates the following hash: _11d9b097ac960bf8a6c131fa_
 
-After creating this unique fingerprint, iOS creates what Apple calls a "cryptographic safety voucher". This safety voucher is essentially an envolope with data related to the image. Some propeties of this voucher:
+This value is the unique fingerprint of that photo. No human will lay their eyes on your dog. iOS only deals with the hash value when determining whether or not that image qualifies as CSAM material.
+
+After creating this unique fingerprint, iOS creates what Apple calls a _cryptographic safety voucher_. This safety voucher is essentially an envolope with data related to the image. Some propeties of this voucher:
 - the user's iPhone creates the voucher
 - the voucher encodes whether or not the image matches an entry in the known CSAM database
 - the voucher contains additional metadata used in downstream decryption by the server

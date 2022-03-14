@@ -1,12 +1,13 @@
-const { withContentlayer } = require('next-contentlayer');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
-module.exports = withContentlayer()({
+module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  experimental: { esmExternals: true },
   eslint: {
-    dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
+    dirs: ['pages', 'components', 'lib', 'scripts'],
     ignoreDuringBuilds: true,
   },
   images: {
@@ -24,17 +25,8 @@ module.exports = withContentlayer()({
       }
     ];
   },
-  webpack: (config, { dev, isServer }) => {
-    // Replace React with Preact only in client production build
-    if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat'
-      });
-    }
-
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
     return config;
   }
 });

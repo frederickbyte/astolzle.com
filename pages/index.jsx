@@ -1,22 +1,9 @@
 import Link from 'next/link'
 import LayoutWrapper from '../components/LayoutWrapper'
-import BlogPost from '../components/BlogPost'
 import BlogPostCard from '../components/BlogPostCard'
+import { parseISO, format } from 'date-fns';
 import Bio from '../components/Bio'
-import { allBlogs } from 'contentlayer/generated';
-import { pick } from '../lib/utils';
-
-export function getStaticProps() {
-  const posts = allBlogs
-    .map((post) => pick(post, ['slug', 'title', 'summary', 'publishedAt']))
-    .sort(
-      (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
-    )
-    .slice(0, 3);
-
-  return { props: { posts } };
-}
+import { getAllPosts } from "../lib/mdx";
 
 export default function Home({ posts }) {
   return (
@@ -41,11 +28,23 @@ export default function Home({ posts }) {
           Recent Posts
         </h3>
         <p className='mt-0 mb-8'>
-          I write about everything from tech to politics. Here's a few recent ones...
+          I write about everything from tech to politics (whatever is on my mind). Here are a few recent ones...
         </p>
         {
-          posts.map((post) => (
-            <BlogPost key={post.title} {...post} />
+          posts.map((post, index) => (
+            <Link key={index} href={`/blog/${post.slug}`}>
+              <a className="w-full transform hover:scale-[1.01] transition-all mb-2">
+                <div className="w-full mb-6">
+                  <div className="flex flex-col justify-between md:flex-row">
+                    <h4 className="mb-1 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100 hover:underline hover:underline-offset-4">
+                      {post.frontmatter.title}
+                    </h4>
+                    <div>{format(parseISO(post.frontmatter.publishedAt), 'MMM dd, yyyy')}</div>
+                  </div>
+                  <p className="mt-0 text-gray-600 dark:text-gray-400">{post.frontmatter.summary}</p>
+                </div>
+              </a>
+            </Link>
           ))
         }
         <Link href="/blog">
@@ -57,3 +56,10 @@ export default function Home({ posts }) {
     </LayoutWrapper>
   )
 }
+
+export const getStaticProps = async () => {
+  const posts = getAllPosts().sort((a, b) => new Date(b.frontmatter.publishedAt) - new Date(a.frontmatter.publishedAt)).slice(0, 3);
+  return {
+    props: { posts },
+  };
+};

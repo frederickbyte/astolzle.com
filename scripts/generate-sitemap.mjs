@@ -1,6 +1,5 @@
-const fs = require('fs')
-const globby = require('globby')
-const siteMetadata = require('../data/siteMetadata')
+import { writeFileSync } from 'fs';
+import { globby } from 'globby';
 
 async function generate() {
   const pages = await globby([
@@ -32,7 +31,7 @@ async function generate() {
         }
         return `
                       <url>
-                          <loc>${siteMetadata.siteUrl}${route}</loc>
+                          <loc>https://www.astolzle.com${route}</loc>
                       </url>
                   `;
       })
@@ -41,7 +40,7 @@ async function generate() {
   `;
 
   // eslint-disable-next-line no-sync
-  fs.writeFileSync('public/sitemap.xml', sitemap);
+  writeFileSync('public/sitemap.xml', sitemap);
 }
 
 generate();

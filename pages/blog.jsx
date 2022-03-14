@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import BlogPost from '../components/BlogPost';
-import { pick } from '../lib/utils';
-import { allBlogs } from 'contentlayer/generated';
+import { getAllPosts } from "../lib/mdx";
+import Link from 'next/link'
 import LayoutWrapper from '../components/LayoutWrapper';
+import { parseISO, format } from 'date-fns';
 
 export default function Blog({
   posts
 }) {
   const [searchValue, setSearchValue] = useState('');
   const filteredBlogPosts = posts.filter((post) =>
-    post.title.toLowerCase().includes(searchValue.toLowerCase())
+    post.frontmatter.title.toLowerCase().includes(searchValue.toLowerCase())
   );
 
   return (
@@ -53,21 +53,29 @@ export default function Blog({
             No posts found.
           </p>
         )}
-        {filteredBlogPosts.map((post) => (
-          <BlogPost key={post.title} {...post} />
-        ))}
+        {
+          filteredBlogPosts.sort((a, b) => new Date(b.frontmatter.publishedAt) - new Date(a.frontmatter.publishedAt)).map((post, index) => (
+            <Link key={index} href={`/blog/${post.slug}`}>
+              <a className="w-full transform hover:scale-[1.01] transition-all mb-2">
+                <div className="w-full mb-6">
+                  <div className="flex flex-col justify-between md:flex-row">
+                    <h4 className="mb-1 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100 hover:underline hover:underline-offset-4">
+                      {post.frontmatter.title}
+                    </h4>
+                    <div>{format(parseISO(post.frontmatter.publishedAt), 'MMM dd, yyyy')}</div>
+                  </div>
+                  <p className="mt-0 text-gray-600 dark:text-gray-400">{post.frontmatter.summary}</p>
+                </div>
+              </a>
+            </Link>
+          ))
+        }
       </div>
     </LayoutWrapper>
   );
 }
 
 export function getStaticProps() {
-  const posts = allBlogs
-    .map((post) => pick(post, ['slug', 'title', 'summary', 'publishedAt']))
-    .sort(
-      (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
-    );
-
+  const posts = getAllPosts();
   return { props: { posts } };
 }

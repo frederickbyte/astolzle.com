@@ -8,15 +8,6 @@ async function generate() {
     feed_url: 'https://astolzle.com/feed.xml'
   });
 
-  // allBlogs.map((post) => {
-  //   feed.item({
-  //     title: post.title,
-  //     url: `https://astolzle.com/blog/${post.slug}`,
-  //     date: post.publishedAt,
-  //     description: post.summary
-  //   });
-  // });
-
   writeFileSync('./public/feed.xml', feed.xml({ indent: true }));
 }
 
