@@ -14,15 +14,18 @@ Apple is introducing new features in its software to limit the spread of Child S
     </div>
 </div>
 
-Reactions to this announcement have been universally negative. Individuals and groups alike are blasting Apple and are calling for mass boycotts in response to their decision to implement these CSAM protections. [Edward Snowden](https://edwardsnowden.substack.com/p/all-seeing-i) and the [Electronic Frontier Foundation](https://www.eff.org/deeplinks/2021/08/apples-plan-think-different-about-encryption-opens-backdoor-your-private-life) are among the many who are lambasting Apple over this announcement. Some are calling Apple's new safety initiatives "the biggest privacy violation ever." John Gruber calls it a "slippery slope" in his [article](https://daringfireball.net/2021/08/apple_child_safety_initiatives_slippery_slope). In short, people **hate** Apple's new CSAM protections.
+Reactions to this announcement have been universally negative. Individuals and groups alike are blasting Apple and are calling for mass boycotts in response to their decision to implement these CSAM protections. [Edward Snowden](https://edwardsnowden.substack.com/p/all-seeing-i) and the [Electronic Frontier Foundation](https://www.eff.org/deeplinks/2021/08/apples-plan-think-different-about-encryption-opens-backdoor-your-private-life) are among the many who are lambasting Apple over this announcement. Some are calling Apple's new safety initiatives "the biggest privacy violation ever." John Gruber calls it a "slippery slope" in his [article](https://daringfireball.net/2021/08/apple_child_safety_initiatives_slippery_slope). In short, people <span className="gray-sriracha">hate</span> Apple's new CSAM protections.
 
 I want to clarify a few misconceptions regarding these new features because the public is quite mistaken about what Apple is doing. I'll also explain why Apple's child protections are **consistent with user privacy.** Much of the fear and anger stems from a misunderstanding of these technologies. I believe that a little more information about the unerlying tools and processes will alleviate some of the anger people hold towards Apple.
 
-Finally, I'll mention why the _federal government_, not Apple, is who we should criticize. We should not fear the technology - we should celebrate it! We should be weary of our own federal government coercing Apple or another tech company into transferring their technologies to authorities.
+Finally, I'll mention why the _federal government_, not Apple, is who we should criticize. We should not fear the technology - we should celebrate itclassName= We should be weary of our own federal government coercing Apple or another tech company into transferring their technologies to authorities.
 
-<div className="calloutInfo">
-  <h3>📄 In this article, we'll discuss:</h3>
-  <ol>
+<div className="p-4 mb-4 bg-white shadow-lg rounded-lg dark:bg-gray-700" role="alert">
+  <div className="flex items-center">
+   <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+      <h3 className="my-0 text-lg font-medium text-gray-700 dark:text-gray-300">What we'll discuss</h3>
+  </div>
+  <ol className="ml-2 mt-2 mb-4 text-base text-gray-700 dark:text-gray-300">
     <li>Apple's new child safety features</li>
     <li>How those new features are consistent with user-privacy</li>
     <li>Why the federal government should not intervene with Apple's new technologies</li>
@@ -31,11 +34,11 @@ Finally, I'll mention why the _federal government_, not Apple, is who we should 
 
 ## A quick note on "spying"
 
-People misunderstand and often misuse the term _spying_. You often hear: "Big Tech is spying on you and your loved ones!" or "Corporations are spying on your data!" Many people fail to understand spying and treat tech companies as enemies rather than friends.
+People misunderstand and often misuse the term _spying_. You often hear: "Big Tech is spying on you and your loved onesclassName=" or "Corporations are spying on your dataclassName=" Many people fail to understand spying and treat tech companies as enemies rather than friends.
 
 Spying is _observing someone without their knowledge and/or consent_.
 
-When Apple, Microsoft, or Google collect telemetry data or send you personalized advertisements: **that is not spying.** When companies plan to collect data, they explain to us what they collect and when.
+When Apple, Microsoft, or Google collect telemetry data or send you personalized advertisements: <span className="gray-sriracha">that is not spying.</span> When companies plan to collect data, they explain to us what they collect and when.
 
 Every major tech company outlines their data collection practices. This is an industry-standard that all major tech companies have adopted, including Apple.
 
@@ -43,14 +46,17 @@ _If someone explicitly outlines when and how they collect data from you, that is
 
 For example, Apple requires that their app developers outline data collection using a nutrition-label style. Apple's communication requirements are clear and transparent, as you can see in the graphic below.
 
-You may not _like_ what they collect or think that they collect too much information - that is an entirely different issue from spying. The public warcry that "Big Tech is spying on me" is, quite frankly, garbage.
+You may not like what they collect or think that they collect too much information -- but that is an entirely different issue from spying. The public warcry that "Big Tech is spying on me" is, quite frankly, garbage.
 
 <figure>
   <img src="../../static/images/applePrivacyLabel.jpg" alt="Apple data nutrition label" />
   <figcaption>Source: Apple, Inc.</figcaption>
 </figure>
 
-We unfairly and dishonestly criticize large tech companies. They are not "spying" on us, regardless of what the anonymous keyboard-warriors may tell you. Yes, they collect data and, on occasion, keep logs of what we do while using their software. But this is _not_ spying if they tell us what they are collecting.
+We unfairly and dishonestly criticize large tech companies. They are not "spying" on us, regardless of what some anonymous keyboard-warriors may tell you. Yes, they collect data and, on occasion, keep logs of what we do while using their software. But this is _not_ spying if they tell us what they are collecting.
+
+In addition, all Big Tech companies allow for users to opt-out of many information-collecting services. Some have even created entire pages dedicated to summarizing data collection. For example: the <a href="https://android-developers.googleblog.com/2021/05/android-security-and-privacy-recap.html" aria-label="Android privacy dashboard">privacy dashboard</a>
+ in Android 12.
 
 This is not to argue that tech companies have implemented these features perfectly. I am simply rebutting the ludicrous but prevalent argument that major tech corporations, specifically Apple, is spying on our data and is watching our every digital move without our consent.
 
@@ -150,7 +156,7 @@ Apple employs a technology called _NeuralHash_ to convert images into long, uniq
     <li>Add the picture to Andrew's profile</li>
     <li>Notify Andrew's followers that he uploaded a new image</li>
   </ol>
-  <p>That's an algorithm!</p>
+  <p>That's an algorithmclassName=</p>
 </div>
 
 This new CSAM feature also utilizes [Private Set Intersection (PSI)](https://www.apple.com/child-safety/pdf/Apple_PSI_System_Security_Protocol_and_Analysis.pdf), which is a cryptographic tool that allows Apple to learn and understand image hashes (derived from NeuralHash) without learning about the image itself. Apple's servers and the user's device both employ PSI as part of Apple's new CSAM protection.
@@ -168,7 +174,7 @@ Many users believe that Apple developers have access to their photos and that pe
 
 **Apple never obtains access to your photos while searching for CSAM material.**
 
-Only the hash values are known. For example, you upload a picture of your dog. NeuralHash generates the following hash: _11d9b097ac960bf8a6c131fa_
+Only the hash values are known. For example, you upload a picture of your dog. NeuralHash generates the following hash: `11d9b097ac960bf8a6c131fa`
 
 This value is the unique fingerprint of that photo. No human will lay their eyes on your dog. iOS only deals with the hash value when determining whether or not that image qualifies as CSAM material.
 
@@ -207,7 +213,7 @@ You may be asking "Why is Apple adding this in now? Seems like they want to coll
 Members of Congress are trying to progress legislation requiring tech companies to scan and submit CSAM material. The most notable of these is the [EARN IT Act](https://www.congress.gov/bill/116th-congress/senate-bill/3398/text), a destructive and immoral bill that would establish a National Commission on Online Child Sexual Exploitation Prevention. This would be a group of Congressmen and other "experts" in the field who make public policy decisions regarding the regulation of child sexual material on the internet.
 
 <div className="calloutInfo">
-  <h3>🔔 I wrote an article on this!</h3>
+  <h3>🔔 I wrote an article on thisclassName=</h3>
   <p>
     I'm taking this opportunity to plug my <a href="/blog/moral-case-earn-it">article</a>
     on the EARN IT Act.
@@ -227,7 +233,7 @@ Apple knows this and has been developing these CSAM protections for years. They 
 
 The technical and mathematical components are impressive and should be celebrated. Yes, with every piece of software comes the risk of hacking or the potential influence of bad actors - this is why companies invest so much into data security, especially Apple. These companies know that user trust is worth billions of dollars, and is why Apple has spent so long developing these tools. Many other companies have been scanning user content for years; Apple is just now entering this realm (at least at such a large leve) because they have developed a method of implementing CSAM detection that operates within their framework of user privacy.
 
-**Apple users can rest assured and expect the same level of privacy that they currently enjoy.** These new features do not annihilate your privacy, despite what you may read on social media. People around the world are raising their fists and shouting at Apple before having even read the summary!
+**Apple users can rest assured and expect the same level of privacy that they currently enjoy.** These new features do not annihilate your privacy, despite what you may read on social media. People around the world are raising their fists and shouting at Apple before having even read the summaryclassName=
 
 This concerns me most. Even technical users are too mentally lazy to discuss the tools and methods Apple is implementing. They prefer to scream and type in all caps while failing to understand what they are yelling about.
 

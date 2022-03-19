@@ -6,7 +6,7 @@ export default function Footer() {
     description: 'Articles and code from Andrew Stolzle',
     language: 'en-us',
     siteUrl: 'https://www.astolzle.com',
-    siteRepo: 'https://github.com/frederickbyte/astolzle.io',
+    siteRepo: 'https://github.com/frederickbyte/astolzle.com',
     siteLogo: '/static/favicons/favicon.ico',
     image: '/static/favicons/android-chrome-192x192.png',
     email: 'andrewstolzle@gmail.com',

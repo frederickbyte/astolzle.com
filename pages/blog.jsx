@@ -19,8 +19,7 @@ export default function Blog({
           Blog
         </h1>
         <p className="mb-4 text-gray-600 dark:text-gray-400">
-          {`I enjoy writing as it helps me to organize my ideas and to think more clearly.
-            Use the search below to filter through ${posts.length} articles. I hope to add more to this list in 2022.`}
+          I enjoy writing as it helps me to organize my ideas and to think more clearly. Use the search below to filter through {posts.length} articles.
         </p>
         <div className="relative w-full mb-4">
           <input

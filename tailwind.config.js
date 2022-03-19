@@ -21,7 +21,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['IBM Plex Sans', ...fontFamily.sans]
+        sans: ['IBM Plex Sans', ...fontFamily.sans],
+        sriracha: ['Sriracha', ...fontFamily.sans]
       },
       typography: (theme) => ({
         DEFAULT: {

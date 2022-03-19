@@ -10,7 +10,7 @@ export default function Aws() {
         </h1>
         <p>
           AWS is a dynamic collection of tools and services that powers the workflows of companies around the world. Like many others, I am on a journey to learn the many
-          services in this "spaghetti bowl" of gadgets that Amazon offers.
+          services in this <span className='indigo-sriracha'>spaghetti bowl</span> of gadgets that Amazon offers.
         </p>
         <p className='my-4'>
           Major shout-out to <a href='https://www.udemy.com/user/stephane-maarek/' aria-label='Stephane Mareek site' target='_blank' className='text-indigo-600 underline underline-offset-4 hover:text-indigo-900'>Stephane Mareek </a> at Udemy. His courses and practice exams are invaluable if you are planning
@@ -74,4 +74,3 @@ export default function Aws() {
     </LayoutWrapper>
   );
 }
-{/* <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg> */ }

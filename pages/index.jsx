@@ -28,7 +28,7 @@ export default function Home({ posts }) {
           Recent Posts
         </h3>
         <p className='mt-0 mb-8'>
-          I write about everything from tech to politics (whatever is on my mind). Here are a few recent ones...
+          I write about everything from tech to politics. Here are a few recent ones on some topics I <span className='gray-sriracha'>thoroughly</span> enjoy...
         </p>
         {
           posts.map((post, index) => (

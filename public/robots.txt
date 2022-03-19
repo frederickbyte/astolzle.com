@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://astolzle.io/sitemap.xml
+Sitemap: https://astolzle.com/sitemap.xml
