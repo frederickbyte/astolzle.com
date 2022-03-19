@@ -135,18 +135,18 @@ table {
 /* Font-specific styles */
 .gray-sriracha {
   @apply text-gray-700;
-  font-family: 'Sriracha', serif;
+  font-family: "Sriracha", -apple-system, sans-serif;
   letter-spacing: 0.3px
 }
 
 .indigo-sriracha {
   @apply text-indigo-700;
-  font-family: 'Sriracha', serif;
+  font-family: "Sriracha", -apple-system, sans-serif;
   letter-spacing: 0.3px
 }
 
 .pink-sriracha {
-  font-family: 'Sriracha', serif;
+  font-family: "Sriracha", -apple-system, sans-serif;
   font-weight: 600;
   color: hsl(333deg, 100%, 45%);
   letter-spacing: 0.3px
