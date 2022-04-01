@@ -7,7 +7,7 @@ export default function BlogPostCard({ title, description, slug, gradient }) {
     <Link href={slug}>
       <a
         className={cn(
-          'transform hover:scale-[1.01] transition-all',
+          'transform hover:scale-[1.01] hover:shadow-lg transition-all',
           'rounded-xl w-full bg-gradient-to-r p-1',
           gradient
         )}
