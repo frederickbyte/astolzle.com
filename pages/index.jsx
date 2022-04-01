@@ -24,7 +24,7 @@ export default function Home({ posts }) {
             gradient="from-[#D8B4FE] to-[#818CF8]"
           />
         </div>
-        <h3 className="mt-2 mb-0 text-2xl font-bold tracking-tight text-black md:text-3xl dark:text-white">
+        <h3 className="mt-2 mb-0 text-2xl font-semibold tracking-tight text-black md:text-3xl dark:text-white">
           Recent Posts
         </h3>
         <p className='mt-0 mb-8'>
