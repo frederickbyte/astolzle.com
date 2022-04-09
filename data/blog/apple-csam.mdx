@@ -14,7 +14,7 @@ Apple is introducing new features in its software to limit the spread of Child S
     </div>
 </div>
 
-Reactions to this announcement have been universally negative. Individuals and groups alike are blasting Apple and are calling for mass boycotts in response to their decision to implement these CSAM protections. [Edward Snowden](https://edwardsnowden.substack.com/p/all-seeing-i) and the [Electronic Frontier Foundation](https://www.eff.org/deeplinks/2021/08/apples-plan-think-different-about-encryption-opens-backdoor-your-private-life) are among the many who are lambasting Apple over this announcement. Some are calling Apple's new safety initiatives "the biggest privacy violation ever." John Gruber calls it a "slippery slope" in his [article](https://daringfireball.net/2021/08/apple_child_safety_initiatives_slippery_slope). In short, people <span className="gray-sriracha">hate</span> Apple's new CSAM protections.
+Reactions to this announcement have been universally negative. Individuals and groups alike are blasting Apple and are calling for mass boycotts in response to their decision to implement these CSAM protections. [Edward Snowden](https://edwardsnowden.substack.com/p/all-seeing-i) and the [Electronic Frontier Foundation](https://www.eff.org/deeplinks/2021/08/apples-plan-think-different-about-encryption-opens-backdoor-your-private-life) are among the many who are lambasting Apple over this announcement. Some are calling Apple's new safety initiatives "the biggest privacy violation ever." John Gruber calls it a "slippery slope" in his [article](https://daringfireball.net/2021/08/apple_child_safety_initiatives_slippery_slope). In short, people **hate** Apple's new CSAM protections.
 
 I want to clarify a few misconceptions regarding these new features because the public is quite mistaken about what Apple is doing. I'll also explain why Apple's child protections are **consistent with user privacy.** Much of the fear and anger stems from a misunderstanding of these technologies. I believe that a little more information about the unerlying tools and processes will alleviate some of the anger people hold towards Apple.
 
@@ -100,9 +100,11 @@ Let's now move on to that feature, which _is_ drawing the ire of many users.
 
 Apple's new iCloud photo feature is garnering the most attention... and anger. Let's summarize things before we dive in.
 
-<div className="calloutInfo">
-  <h3>🛡️ CSAM protection summary</h3>
-  <p>
+<div className="p-4 mb-4 bg-white shadow-lg rounded-lg dark:bg-gray-700" role="alert">
+  <div className="flex items-center">
+      <h3 className="my-0 text-lg font-medium text-gray-700 dark:text-gray-300">🛡️ CSAM Protections?</h3>
+  </div>
+   <p className="ml-2 mt-2 mb-4 text-base text-gray-700 dark:text-gray-300">
     Apple utilizes this detection feature to identify and report iCloud users who store
     known Child Sexual Abuse (CSAM) material in their iCloud Photos
     accounts.
@@ -112,7 +114,7 @@ Apple's new iCloud photo feature is garnering the most attention... and anger. L
     image hashes, Apple may contact the National Center for Missing and Exploited Children (NCMEC)
     and report that user for possible CSAM violations.
   </p>
-  <p>
+  <p className="ml-2 mt-2 mb-4 text-base text-gray-700 dark:text-gray-300">
     <b>
       This feature applies only to users who utilize iCloud to store and/or backup their photos.
     </b>
@@ -142,14 +144,16 @@ This on-device matching has caused panic and anger from even the most loyal of A
 
 Apple employs a technology called _NeuralHash_ to convert images into long, unique strings of characters. This allows iOS to uniquely identify an image without having to pass the literal image around. The algorithm ensures that images which are visually similar will produce the same hash whereas images that are different from one another will produce different hashes. This prevents child predators from blurring or mis-coloring their child pornography to avoid detection.
 
-<div className="calloutInfo">
-  <h3>💡 An algorithm is a step-by-step procedure for accomplishing something</h3>
+<div className="p-4 mb-4 bg-white shadow-lg rounded-lg dark:bg-gray-700" role="alert">
+  <div className="flex items-center">
+      <h3 className="my-0 text-lg font-medium text-gray-700 dark:text-gray-300">💡 An algorithm is a step-by-step procedure for accomplishing something</h3>
+  </div>
   <p>
     Developers give machines instructions to accopmlish some task - that is the essence of an
     algorithm.
   </p>
   <p className="leading-9">
-  For example: when you click the <span className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow hover">+</span> button on Instagram, the system runs through the instructions that the developer gave it. That could be:
+  For example: when you click the "Add Image" button on Instagram, the system runs through the instructions that the developer gave it. That could be:
   </p>
   <ol>
     <li>Send the picture to our sever</li>
@@ -212,9 +216,11 @@ You may be asking "Why is Apple adding this in now? Seems like they want to coll
 
 Members of Congress are trying to progress legislation requiring tech companies to scan and submit CSAM material. The most notable of these is the [EARN IT Act](https://www.congress.gov/bill/116th-congress/senate-bill/3398/text), a destructive and immoral bill that would establish a National Commission on Online Child Sexual Exploitation Prevention. This would be a group of Congressmen and other "experts" in the field who make public policy decisions regarding the regulation of child sexual material on the internet.
 
-<div className="calloutInfo">
-  <h3>🔔 I wrote an article on this!</h3>
-  <p>
+<div className="p-4 mb-4 bg-white shadow-lg rounded-lg dark:bg-gray-700" role="alert">
+  <div className="flex items-center">
+      <h3 className="my-0 text-lg font-medium text-gray-700 dark:text-gray-300">🔔 I wrote an article on this!</h3>
+  </div>
+ <p>
     I'm taking this opportunity to plug my <a href="/blog/moral-case-earn-it">article</a>
     on the EARN IT Act.
   </p>
@@ -222,8 +228,10 @@ Members of Congress are trying to progress legislation requiring tech companies 
 
 Apple knows this and has been developing these CSAM protections for years. They now have a way of implementing these protections while staying consistent with their privacy promises. This is why upcoming software updates will include these protective features. *Not* because they want to snoop or spy on us, but because they want to have a sustainable suite of tools that will be consistent with upcoming federal regulations.
 
-<div className="calloutInfo">
-  <h3>📝 The important points:</h3>
+<div className="p-4 mb-4 bg-white shadow-lg rounded-lg dark:bg-gray-700" role="alert">
+  <div className="flex items-center">
+      <h3 className="my-0 text-lg font-medium text-gray-700 dark:text-gray-300">📝 The important points</h3>
+  </div>
   <ol>
     <li>Apple developers (i.e. human eyes) do not ever scan or look at your pictures</li>
     <li>Your iMessages are still end-to-end encrypted</li>

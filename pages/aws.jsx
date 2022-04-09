@@ -10,7 +10,7 @@ export default function Aws() {
         </h1>
         <p>
           AWS is a dynamic collection of tools and services that powers the workflows of companies around the world. Like many others, I am on a journey to learn the many
-          services in this <span className='indigo-sriracha'>spaghetti bowl</span> of gadgets that Amazon offers.
+          services in this <em>spaghetti bowl</em> of gadgets that Amazon offers.
         </p>
         <p className='my-4'>
           Major shout-out to <a href='https://www.udemy.com/user/stephane-maarek/' aria-label='Stephane Mareek site' target='_blank' className='text-indigo-600 underline underline-offset-4 hover:text-indigo-900'>Stephane Mareek </a> at Udemy. His courses and practice exams are invaluable if you are planning
