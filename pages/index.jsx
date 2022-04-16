@@ -10,7 +10,7 @@ export default function Home({ posts }) {
     <LayoutWrapper>
       <div className="flex flex-col justify-center min-h-full items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <Bio />
-        <div className="flex gap-6 flex-col md:flex-row my-4">
+        <div className="flex gap-6 flex-col md:flex-row my-8">
           <BlogPostCard
             title="Amazon Web Services"
             description="Notes and materials regarding AWS"
