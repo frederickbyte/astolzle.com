@@ -24,10 +24,10 @@ export default function Aws() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <div className="w-full block p-6 rounded-lg shadow-lg bg-gray-100 ml-6 mb-10">
+              <div className="w-full block p-6 blocky-card bg-gray-100 ml-6 mb-10">
                 <div className="flex justify-between mb-4">
-                  <div className="font-medium text-indigo-600 text-indigo-60 text-sm">CLF-C01 Certification</div>
-                  <div className="font-medium text-indigo-600 text-indigo-60 text-sm">Feb. 2022</div>
+                  <div className="font-semibold text-indigo-600 text-indigo-60 text-sm">CLF-C01 Certification</div>
+                  <div className="font-semibold text-indigo-600 text-indigo-60 text-sm">Feb. 2022</div>
                 </div>
                 <p className="text-gray-700 mb-2">Achieved the Certified Cloud Practitioner <a href='https://www.credly.com/badges/278f3eb4-a7ab-4b66-b9a7-d0afc41c34f2/public_url' target='_blank' className='text-indigo-600 underline underline-offset-4 hover:text-indigo-900'>certification</a> in February of 2022</p>
                 <p className='text-gray-700'>
@@ -44,7 +44,7 @@ export default function Aws() {
                   <path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path>
                 </svg>
               </div>
-              <div className="w-full block p-6 rounded-lg shadow-lg bg-gray-100 ml-6 mb-10">
+              <div className="w-full block p-6 blocky-card bg-gray-100 ml-6 mb-10">
                 <div className="flex justify-between mb-4">
                   <div className="font-medium text-indigo-600 text-sm">DVA-C01 Certification</div>
                   <div className="font-medium text-indigo-600 text-sm">In Progress</div>
@@ -60,10 +60,10 @@ export default function Aws() {
                   <path fill='currentColor' strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path>
                 </svg>
               </div>
-              <div className="w-full block p-6 rounded-lg shadow-lg bg-gray-100 ml-6 mb-10">
+              <div className="w-full block p-6 blocky-card bg-gray-100 ml-6 mb-10">
                 <div className="flex justify-between mb-4">
-                  <div className="font-medium text-indigo-600 text-sm">SAA-C02 Certification</div>
-                  <div className="font-medium text-indigo-600 text-sm">Future Goal</div>
+                  <div className="font-semibold text-indigo-600 text-sm">SAA-C02 Certification</div>
+                  <div className="font-semibold text-indigo-600 text-sm">Future Goal</div>
                 </div>
                 <p className="text-gray-700 mb-1">Certified Solutions Architect Associate</p>
               </div>

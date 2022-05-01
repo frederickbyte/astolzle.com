@@ -6,15 +6,11 @@ export default function BlogPostCard({ title, description, slug, gradient }) {
   return (
     <Link href={slug}>
       <a
-        className={cn(
-          'transform hover:scale-[1.01] hover:shadow-lg transition-all',
-          'rounded-xl w-full bg-gradient-to-r p-1',
-          gradient
-        )}
+        className={'blocky flex-1'}
       >
         <div className="flex flex-col h-full bg-white dark:bg-gray-900 rounded-lg p-4">
           <div className="flex flex-col md:flex-row justify-between">
-            <h4 className="text-lg md:text-lg font-medium mb-6 sm:mb-10 w-full text-gray-900 dark:text-gray-100 tracking-tight">
+            <h4 className={cn("text-lg md:text-lg font-bold mb-6 sm:mb-10 w-full dark:text-gray-100 tracking-tight", gradient)}>
               {title}
             </h4>
           </div>

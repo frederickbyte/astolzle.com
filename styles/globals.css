@@ -1,21 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("blocks.css");
 
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 100 900;
   font-display: optional;
-  src: url(/fonts/ibm-plex-sans-var.woff2) format('woff2');
+  src: url(/fonts/Proxima-Nova-Regular.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: italic;
-  font-weight: 100 900;
+  font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
   font-display: optional;
-  src: url(/fonts/ibm-plex-sans-var-italic.woff2) format('woff2');
+  src: url(/fonts/Proxima-Nova-Regular-Semibold.woff2) format('woff2');
 }
 
 @font-face {
@@ -26,14 +27,20 @@
   src: url(/fonts/Sriracha.woff2) format('woff2');
 }
 
-::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
-}
-
 html {
   min-width: 360px;
   scroll-behavior: smooth;
+}
+
+body {
+  --block-text-color: #222;
+  --block-background-color: #fff;
+  --block-accent-color: #FFBE5C;
+  --block-shadow-color: #444;
+  --pastel-green-color: rgb(167, 250, 180);
+  --pastel-orange-color: #FFBE5C;
+  --pastel-pink-color: rgb(255, 186, 248);
+  --pastel-yellow-color: rgb(250, 240, 167);
 }
 
 figcaption {

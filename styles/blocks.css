@@ -1,0 +1,168 @@
+/* ADAPTED FROM https://github.com/thesephist/blocks.css */
+
+/* BASIC BLOCK STYLES */
+.blocky {
+  display: block;
+  color: var(--block-text-color);
+  border: 3px solid var(--block-text-color);
+  border-radius: 3px;
+  padding: 4px 8px;
+  background: var(--block-background-color);
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  position: relative;
+  top: -2px;
+  left: -2px;
+  transition: transform 0.2s;
+  margin: 8px 6px 10px 6px;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+/* CARD STYLES */
+.blocky-card {
+  display: block;
+  color: var(--block-text-color);
+  border: 3px solid var(--block-text-color);
+  border-radius: 3px;
+  padding: 4px 8px;
+  background: var(--block-background-color);
+  font-weight: normal;
+  box-sizing: border-box;
+  position: relative;
+  top: -2px;
+  left: -2px;
+  transition: transform 0.2s;
+  margin: 8px 6px 10px 6px;
+  z-index: 1;
+}
+
+.blocky.wrapper,
+.blocky.wrapper.inline {
+  display: inline-block;
+  padding: 0;
+}
+
+.blocky.wrapper > * {
+  margin: 0;
+}
+
+/* INTERACTIVE BLOCK STYLES */
+.blocky::before, .blocky-card::before {
+  content: "";
+  background: var(--block-background-color);
+  border: 3px solid var(--block-text-color);
+  border-radius: 3px;
+  box-sizing: border-box;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  height: calc(100% + 6px);
+  width: calc(100% + 6px);
+  z-index: -1;
+}
+
+.blocky:hover,
+.blocky:focus {
+  transform: translate(2px, 2px);
+}
+
+.blocky::after, .blocky-card::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  background: var(--block-shadow-color);
+  border: 3px solid var(--block-text-color);
+  border-radius: 3px;
+  height: calc(100% + 6px);
+  width: calc(100% + 6px);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 0;
+  z-index: -2;
+  transition: transform 0.2s;
+}
+
+.blocky:hover::after,
+.blocky:focus::after {
+  transform: translate(-2px, -3px);
+}
+
+.blocky:active {
+  color: var(--block-text-color);
+  transform: translate(3px, 3px);
+}
+
+.blocky:active::after {
+  transform: translate(-4px, -4px);
+}
+
+.blocky:focus {
+  outline: none;
+}
+
+.blocky.fixed {
+  cursor: initial !important;
+}
+
+/* FIXED STYLES */
+.blocky.fixed:hover,
+.blocky.fixed:hover::before,
+.blocky.fixed:hover::after,
+.blocky.fixed:active,
+.blocky.fixed:active::before,
+.blocky.fixed:active::after,
+.blocky.fixed:focus,
+.blocky.fixed:focus::before,
+.blocky.fixed:focus::after {
+  transform: none !important;
+}
+
+/* ACCENT STYLES */
+.blocky.accent {
+  color: var(--block-text-color);
+  background: var(--block-accent-color);
+}
+
+.blocky.accent::before {
+  background: var(--block-accent-color);
+}
+
+/* INLINE STYLES */
+.blocky.inline {
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 0 6px;
+  margin: 3px 2px 1px 4px;
+}
+.blocky.inline::after {
+  top: -1px;
+  left: -1px;
+}
+.blocky.inline:hover,
+.blocky.inline:focus {
+  transform: translate(1px, 1px);
+}
+.blocky.inline:hover::after,
+.blocky.inline:focus::after {
+  transform: translate(-1px, -1px);
+}
+.blocky.inline:active {
+  transform: translate(2px, 2px);
+}
+
+/* ROUND STYLES */
+.blocky.round,
+.blocky.round::before,
+.blocky.round::after {
+  border-radius: 30px;
+}
+
+.blocky.round::after {
+  left: 1px;
+}

@@ -15,20 +15,20 @@ export default function Home({ posts }) {
             title="Amazon Web Services"
             description="Notes and materials regarding AWS"
             slug="/aws"
-            gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
+            gradient='text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900'
           />
           <BlogPostCard
             title="Rust Language"
             description="Notes and resources on Rust"
             slug="/rust"
-            gradient="from-[#D8B4FE] to-[#818CF8]"
+            gradient='text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'
           />
         </div>
         <h3 className="mt-2 mb-0 text-2xl font-semibold tracking-tight text-black md:text-3xl dark:text-white">
           Recent Posts
         </h3>
         <p className='mt-0 mb-8'>
-          I write about everything from tech to politics. Here are a few recent ones on some topics I <span className='gray-sriracha'>thoroughly</span> enjoy...
+          I write about everything from tech to politics. Here are a few recent ones...
         </p>
         {
           posts.map((post, index) => (
@@ -48,7 +48,7 @@ export default function Home({ posts }) {
           ))
         }
         <Link href="/blog">
-          <a href='/blog' aria-label='view blog button' className="transform hover:scale-[1.01] transition-all bg-transparent hover:text-gray-900 text-gray-700 font-semibold py-2 px-4 border border-gray-700 hover:border-gray-900 rounded inline-flex items-center">
+          <a href='/blog' aria-label='view blog button' className="blocky inline-flex items-center">
             View articles &rarr;
           </a>
         </Link>
@@ -58,7 +58,7 @@ export default function Home({ posts }) {
 }
 
 export const getStaticProps = async () => {
-  const posts = getAllPosts().sort((a, b) => new Date(b.frontmatter.publishedAt) - new Date(a.frontmatter.publishedAt)).slice(0, 3);
+  const posts = getAllPosts().sort((a, b) => new Date(b.frontmatter.publishedAt) - new Date(a.frontmatter.publishedAt)).slice(0, 4);
   return {
     props: { posts },
   };

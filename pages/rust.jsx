@@ -7,7 +7,7 @@ export default function Rust() {
         <h1 className="font-bold text-3xl md:text-4xl tracking-tight mb-1 text-black dark:text-white">
           Rust Programming Language
         </h1>
-        <div className="bg-indigo-100 rounded-lg py-4 px-5 mt-2 mb-4 text-base text-indigo-700 inline-flex items-center w-full" role="alert">
+        <div className="bg-indigo-100 border-2 border-gray-700 py-4 px-5 mt-2 mb-4 text-base text-indigo-700 inline-flex items-center w-full" role="alert">
           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" className="w-4 h-4 mr-2 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path>
           </svg>
@@ -32,7 +32,7 @@ export default function Rust() {
         <div className='flex flex-col mt-4'>
           Rust is, quite honestly, a bit intimidating from a syntactic perspective because it seems to have taken inspiration from multiple languages.
           But the community is welcoming and helpful for novices like myself.
-          <p className='my-1'>Soon I'll begin my journey into Rust as it has been on my radar for some time. Here, I'll drop information, notes, and other cool resources I come across along the way. Two resources I'll certainly be using are:</p>
+          <p className='my-1'>I'll soon begin my journey into Rust as it has been on my radar for some time. I'll drop info, notes, and other cool resources I come across along the way. Two resources I will certainly be using are:</p>
           <div className='flex items-center flex-wrap mt-2 mb-3'>
             {/* <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> */}
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
