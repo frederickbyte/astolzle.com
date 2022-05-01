@@ -24,9 +24,9 @@ export default function Home({ posts }) {
             gradient='text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'
           />
         </div>
-        <h3 className="mt-2 mb-0 text-2xl font-semibold tracking-tight text-black md:text-3xl dark:text-white">
+        <h2 className="mt-2 mb-0 text-2xl font-semibold tracking-tight text-black md:text-3xl dark:text-white">
           Recent Posts
-        </h3>
+        </h2>
         <p className='mt-0 mb-8'>
           I write about everything from tech to politics. Here are a few recent ones...
         </p>

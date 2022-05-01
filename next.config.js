@@ -6,6 +6,10 @@ module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  i18n: {
+    locales: ['en-US'],
+    defaultLocale: 'en-US',
+  },
   eslint: {
     dirs: ['pages', 'components', 'lib', 'scripts'],
     ignoreDuringBuilds: true,
