@@ -37,6 +37,7 @@ body {
   --block-background-color: #fff;
   --block-accent-color: #FFBE5C;
   --block-shadow-color: #444;
+  --pastel-blue-color: rgba(83,143,247);
   --pastel-green-color: rgb(167, 250, 180);
   --pastel-orange-color: #FFBE5C;
   --pastel-pink-color: rgb(255, 186, 248);
@@ -133,6 +134,11 @@ table {
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
+}
+
+/* Hyphenate text for blog posts */
+.prose > p {
+  hyphens: auto;
 }
 
 .skip-nav {
