@@ -22,7 +22,7 @@ const Bio = () => {
           </svg>
         </h1>
         <p className="my-3 text-gray-600 dark:text-gray-400">
-          Welcome in! I'm Andrew, a developer with experience creating primarily web and mobile applications. I program full-time and also enjoy
+          Hey there! I'm Andrew, a developer with experience creating primarily web and mobile applications. I program full-time and also enjoy
           writing as it helps me to organize my ideas and to think more clearly.
         </p>
       </div>
