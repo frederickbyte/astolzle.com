@@ -17,6 +17,11 @@ module.exports = withBundleAnalyzer({
   images: {
     formats: ['image/avif', 'image/webp']
   },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
   async headers() {
     return [
       {
