@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import LayoutWrapper from '../components/LayoutWrapper';
 
 export default function Aws() {
@@ -14,7 +13,7 @@ export default function Aws() {
         </p>
         <p className='my-4'>
           Major shout-out to <a href='https://www.udemy.com/user/stephane-maarek/' aria-label='Stephane Mareek site' target='_blank' className='text-indigo-600 underline underline-offset-4 hover:text-indigo-900'>Stephane Mareek </a> at Udemy. His courses and practice exams are invaluable if you are planning
-          to learn and prepare for the exams. Below is an outline of my <em>brief</em> journey along with some notes and information I have collected along the way.
+          to learn and prepare for the exams. Below is an outline of my brief journey along with some notes and information I have collected along the way.
         </p>
         <ol className="w-full mt-8 border-l-2 border-indigo-600">
           <li>

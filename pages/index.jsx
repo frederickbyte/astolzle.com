@@ -10,12 +10,18 @@ export default function Home({ posts }) {
     <LayoutWrapper>
       <div className="flex flex-col justify-center min-h-full items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <Bio />
-        <div className="flex gap-6 flex-col md:flex-row my-8">
+        <div className="flex gap-6 flex-col md:flex-row my-6">
           <BlogPostCard
             title="Amazon Web Services"
-            description="Notes and materials regarding AWS"
+            description="Notes and materials on AWS"
             slug="/aws"
             gradient='text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900'
+          />
+           <BlogPostCard
+            title="Aviation"
+            description="Learning to fly"
+            slug="/flight"
+            gradient='text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'
           />
           <BlogPostCard
             title="Rust Language"
@@ -28,7 +34,7 @@ export default function Home({ posts }) {
           Recent Posts
         </h2>
         <p className='mt-0 mb-8'>
-          Here are some recent articles on topics I'm particularly interested in...
+          Here are some articles on topics I'm particularly interested in...
         </p>
         {
           posts.map((post, index) => (
