@@ -7,7 +7,7 @@ export default function BlogPostCard({ title, description, slug, gradient }) {
       <a
         className={'blocky flex-1'}
       >
-        <div className="flex flex-col h-full bg-white dark:bg-gray-900 rounded-lg p-4">
+        <div className="flex flex-col h-full justify-between bg-white dark:bg-gray-900 rounded-lg p-4">
           <div className="flex flex-col md:flex-row justify-between">
             <h2 className={cn("text-lg md:text-lg font-bold mb-6 sm:mb-10 w-full dark:text-gray-100 tracking-tight", gradient)}>
               {title}

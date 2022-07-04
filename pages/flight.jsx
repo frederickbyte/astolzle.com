@@ -1,5 +1,7 @@
 import LayoutWrapper from '../components/LayoutWrapper';
+import InfoCallout from '../components/InfoCallout';
 import WarningCallout from '../components/WarningCallout';
+
 export default function Flight() {
   return (
     <LayoutWrapper title="Aviation | Andrew Stolzle">
@@ -25,6 +27,9 @@ export default function Flight() {
         <h2 className="mt-4 mb-0 text-2xl font-semibold tracking-tight text-black md:text-3xl dark:text-white">
           How planes fly
         </h2>
+        <InfoCallout
+          title='More info to come'
+          description='I will begin to fly and study in the next couple of weeks. Stay tuned!' />
       </div>
     </LayoutWrapper>
   );

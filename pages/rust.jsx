@@ -9,8 +9,8 @@ export default function Rust() {
           Rust Programming Language
         </h1>
         <InfoCallout
-          title='Work In Progress!'
-          description='I will update this page with more information once I start digging into Rust.'/>
+          title='Rust is on hold... for now'
+          description='I will be digging into Rust in the future. Stay tuned!'/>
         <p>
           <a href='https://www.rust-lang.org/' target='_blank' className='text-indigo-600 underline underline-offset-4 hover:text-indigo-900'>Rust</a> continues to grow within the development community.
           Rust has no runtime or garbage collection, and claims to be "blazingly fast and memory-efficient."
